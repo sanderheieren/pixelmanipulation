@@ -1,7 +1,7 @@
 const myImage = new Image();
 // cross origin - png to base 64: https://onlinepngtools.com/convert-png-to-base64 
 
-myImage.src = 'babyyoda.jpg'// 
+myImage.src = '../public/meg.jpg'// 
 
 myImage.addEventListener('load', () => {
   const canvas = document.getElementById('canvas1');
