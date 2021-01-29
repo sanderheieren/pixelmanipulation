@@ -24,13 +24,13 @@ class Particle {
     this.y = y;
     this.size = Math.random() * 13 + 1;
     this.weight = Math.random() * 1 + 1;
-    this.directionX = 2;
+    this.directionX = 1.5;
   }
   update() {
     if(this.y > canvas.height) {
       this.y = 0 - this.size;
       this.weight = Math.random() * 1 + 1;
-      this.x = Math.random() * canvas.width * 1.3;
+      this.x = Math.random() * canvas.width * (2.3);
     }
     this.weight += 0.01;
     this.y += this.weight;
@@ -41,10 +41,10 @@ class Particle {
       this.x < title.x + title.width && 
       this.x + this.size > title.x && 
       this.y < title.y + title.height &&
-      this. y + this.size > title.y
+      this.y + this.size > title.y
     ) {
-      this.y -= 3;
-      this.weight *= -.5;
+      this.y -= 5;
+      this.weight *= -.75;
     }
   }
   draw() {
@@ -67,6 +67,7 @@ init()
 
 function animate() {
   ctx.fillStyle = 'rgba(173,216,130,0.01)'
+  // ctx.clearRect(0,0,canvas.width, canvas.height)
   ctx.fillRect(0,0,canvas.width, canvas.height);
   for(let i = 0; i < particlesArray.length; i++) {
     particlesArray[i].update();

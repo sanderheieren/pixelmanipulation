@@ -29,7 +29,9 @@
 #title::before {
 	content: "Hello, I'm";
 	position: absolute;
-	top: -70px;
+	top: -100px;
+	left: -50px;
 	font-size: 40px;
 	text-align: center;
+	transform: rotate(-15deg);
 }
