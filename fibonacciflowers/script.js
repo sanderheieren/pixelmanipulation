@@ -11,7 +11,7 @@ let scale = 4;
 let hit = false;
 
 function drawFlower() {
-  let angle = number * 8;
+  let angle = number * 0.01;
   let radius = scale * Math.sqrt(number);
   let posX = radius * Math.sin(angle) + canvas.width / 2;
   let posY = radius * Math.cos(angle) + canvas.height / 2;
