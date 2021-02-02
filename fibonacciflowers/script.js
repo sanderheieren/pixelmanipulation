@@ -24,6 +24,7 @@ function drawFlower() {
   ctx.closePath();
   ctx.fill();
   ctx.stroke();
+
   
   if(!hit){
     number++;
